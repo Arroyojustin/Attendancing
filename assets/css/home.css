@@ -1,0 +1,15 @@
+.card i {
+    font-size: 48px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}

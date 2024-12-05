@@ -1,0 +1,30 @@
+.circle-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.circle {
+    position: relative;
+}
+
+.plus-icon {
+    position: absolute;
+    top: 50%; 
+    right: 50%;
+    transform: translate(50%, -50%); /* This centers the icon inside the circle */
+    z-index: 10; /* Ensure the icon is on top of the image */
+}
+
+@media (max-width: 767px) {
+    .plus-icon {
+        font-size: 28px; /* Make the icon smaller on small screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .plus-icon {
+        font-size: 24px; /* Further reduce the size on extra small screens */
+    }
+}
+
+

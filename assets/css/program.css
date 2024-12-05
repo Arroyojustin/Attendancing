@@ -1,0 +1,128 @@
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #d7ff96, #2ecc71);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Program container */
+.program-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Event item */
+.event-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+    transform: scale(1.05);
+}
+
+/* Event date */
+.event-date {
+    background-color: #27ae60;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Event content */
+.event-content {
+    padding: 20px;
+}
+
+.event-content h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.event-content p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .events-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-item {
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .event-date {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .event-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .event-content p {
+        font-size: 0.9rem;
+    }
+}

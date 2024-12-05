@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .container-fluid {
+    padding-bottom: 20px; /* Add space at the bottom of the container */
+  }
+  
+  .calendar {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px; /* Add space below the calendar */
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+
+  .calendar-header button {
+    border: none;
+    background: hsl(0, 0%, 98%);
+    /* Remove this color property or set it to inherit */
+    color: inherit; /* or color: black; for a specific default color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    order: 1;
+    margin-left: 5px;
+}
+
+  .calendar-header button:not(:last-child) {
+    margin-right: 5px; /* Slight distance between the arrows */
+  }
+
+  .calendar-header button:hover {
+    /* background: #2FB371; */
+    /* Optionally adjust hover color here if needed */
+    color: inherit; /* Remove if unnecessary */
+}
+
+  .calendar-header h3 {
+  margin: 0;
+  font-size: 1.2rem; /* Adjust font size for the abbreviated month */
+  text-transform: capitalize; /* Ensure the month starts with a capital letter */
+  order: 0;
+}
+
+.calendar-header .month {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .calendar-header button {
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .calendar-grid div {
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .calendar-grid .header {
+    font-weight: bold;
+  }
+  .calendar-grid .day {
+    width: 24px; /* Smaller width */
+    height: 24px; /* Same height as width for perfect circle */
+    border-radius: 50%; /* Ensure it stays a perfect circle */
+    text-align: center;
+    padding: 0; /* No padding, keep the circle compact */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent; /* Optional, for better styling */
+  }
+
+  /* .calendar-grid .day:hover {
+  background: #E8F5E9;
+} */
+
+.calendar-grid .selected {
+    background: #35D383;
+    color: white;
+    border: none; /* Optional: remove border when selected */
+  }
+
+  

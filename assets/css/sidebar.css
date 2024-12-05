@@ -1,0 +1,125 @@
+.sidebar-container {
+    width: 200px;
+    min-width: 200px;
+    height: 100vh;
+    background-color: #198754;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.sidebar-link {
+    font-size: 1rem;
+    color: #f8f8f8;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s, margin-left 0.3s, width 0.3s;
+}
+
+.sidebar-link.active {
+    background-color: #f8f8f8;
+    height: 40px;
+    color: #198754;
+    border-radius: 7px 0 0 7px;
+    margin-left: 20px;
+    width: calc(100% - 20px);
+    position: relative;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.sidebar-link:not(.active) {
+    background-color: transparent;
+    height: 40px;
+    border-radius: 7px 0 0 7px;
+    width: calc(100% - 10px);
+}
+
+.sidebar-link.active i {
+    color: #198754;
+}
+
+.sidebar-link i {
+    width: 35px;
+    font-size: 1.4rem;
+    color: #f8f8f8;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.sidebar-footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: auto;
+}
+
+.sidebar-container.toggled {
+    width: 90px;
+    min-width: 90px;
+}
+
+.sidebar-container.toggled .sidebar-link i {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.sidebar-container.toggled .sidebar-link.active {
+    margin-left: 22px;
+    width: calc(100% - 20px);
+}
+
+
+.sidebar-container.d-none {
+    display: none;
+}
+
+.sidebar .nav-item.dropdown .dropdown-toggle::after {
+    width: 1rem;
+    text-align: center;
+    float: right;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+}
+
+.sidebar .nav-item.dropdown.show .dropdown-toggle::after {
+    content: "\f107";
+}
+
+.sidebar .nav-item .nav-link {
+    position: relative;
+}
+
+.sidebar .nav-item .nav-link .badge-counter {
+    position: absolute;
+    transform: scale(0.7);
+    transform-origin: top right;
+    right: 0.25rem;
+    margin-top: -0.25rem;
+}
+
+.sidebar .nav-item .nav-link .img-profile {
+    height: 2rem;
+    width: 2rem;
+}
